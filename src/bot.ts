@@ -163,6 +163,7 @@ const aboutUrlKeyboard = new InlineKeyboard().url(
 // Suggest commands in the menu
 bot.api.setMyCommands([
   { command: "yo", description: "Be greeted by the bot" },
+  { command: "hi", description: "Just dododoododododod" },
   {
     command: "effect",
     description: "Apply text effects on the text. (usage: /effect [text])",
