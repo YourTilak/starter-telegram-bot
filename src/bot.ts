@@ -10,6 +10,7 @@ const bot = new Bot(process.env.TELEGRAM_TOKEN || "");
 
 // Handle the /yo command to greet the user
 bot.command("yo", (ctx) => ctx.reply(`Yo ${ctx.from?.username}`));
+bot.command("yoi", (ctx) => ctx.reply(`Yo ${ctx.from?.username}`));
 
 // Handle the /effect command to apply text effects using an inline keyboard
 type Effect = { code: TextEffectVariant; label: string };
@@ -160,6 +161,7 @@ const aboutUrlKeyboard = new InlineKeyboard().url(
 // Suggest commands in the menu
 bot.api.setMyCommands([
   { command: "yo", description: "Be greeted by the bot" },
+  { command: "yoi", description: "Be greeted by the bot" },
   {
     command: "effect",
     description: "Apply text effects on the text. (usage: /effect [text])",
